@@ -91,7 +91,7 @@ export default function ProjectDetailPage({
         </div>
 
         {/* Related templates Section */}
-        <div className="mt-8 lg:mt-32">
+        <div className="mt-8 lg:mt-28">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 lg:mb-8">
             Related Templates
           </h2>

@@ -1,7 +1,7 @@
 import React from "react";
 const geistspace = () => {
   return (
-    <div className=" my-20 bg-[#111111] rounded-xl flex justify-between p-14 items-center flex-wrap ">
+    <div className="mt-28 bg-[#111111] rounded-xl flex justify-between p-14 items-center flex-wrap ">
       <div className="space-y-6">
         <h1 className="text-white text-2xl sm:text-4xl md:text-5xl  font-bold tracking-tight">
           Unleash New Possibilities
