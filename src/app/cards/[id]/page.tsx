@@ -23,7 +23,7 @@ export default function ProjectDetailPage({
   }
 
   return (
-    <div className="wrapper min-h-screen bg-background py-4 lg:py-8">
+    <div className="wrapper min-h-screen bg-background py-4 mt-16 lg:py-8">
       <div className="mx-auto max-w-7xl py-4 ">
         {/* Main Content Section */}
         <div className="grid gap-8 lg:gap-12 lg:grid-cols-[35%_61%] mb-8 lg:mb-16">
@@ -79,8 +79,6 @@ export default function ProjectDetailPage({
               </div>
             </div>
           </div>
-
-          {/* Right Section with Larger Image */}
           <div className="right-section h-[400px] lg:h-[450px] relative rounded-2xl shadow-2xl overflow-hidden">
             <Image
               src={card.image}
@@ -92,8 +90,8 @@ export default function ProjectDetailPage({
           </div>
         </div>
 
-        {/* Related Cards Section */}
-        <div className="mt-8 lg:mt-16">
+        {/* Related templates Section */}
+        <div className="mt-8 lg:mt-32">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 lg:mb-8">
             Related Templates
           </h2>
@@ -156,7 +154,7 @@ export default function ProjectDetailPage({
           </div>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-10">
           <Geistspace />
         </div>
       </div>
