@@ -5,7 +5,7 @@
     "title": "Next.js Boilerplate",
     "image": "https://vercel.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F1aHobcZ8H6WY48u5CMXlOe%2F0f0efe6bd469985b692555fbcad1cc01%2Fnextjs-template.png&w=1920&q=75",
     "description": "Get started with Next.js and React in seconds.",
-    "Framework": "Nextjs",
+    "Framework": "Next.js",
     "usecase": "Starter",
     "css": "CSS Modules",
     "link": "https://nextjs.org",

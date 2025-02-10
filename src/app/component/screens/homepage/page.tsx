@@ -7,7 +7,7 @@ export default function Homepage() {
     <>
       <Spotlight />
       <Main_page />
-       <div className='wrapper'>
+       <div className='wrapper py-16'>
               <Geistspace/>
         </div>
     </>

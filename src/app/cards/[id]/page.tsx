@@ -110,8 +110,8 @@ export default function ProjectDetailPage({
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute top-4 left-4">
-                      <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center">
+                    <div className="absolute bottom-4 left-4">
+                      <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center">
                         <span className="text-sm">N</span>
                       </div>
                     </div>
@@ -154,7 +154,7 @@ export default function ProjectDetailPage({
           </div>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-24">
           <Geistspace />
         </div>
       </div>
