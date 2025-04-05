@@ -63,13 +63,13 @@ const FilterTemplates = ({ onSearch, onFilterChange }) => {
 
   return (
     <div className="w-full max-w-sm py-4">
-      <h2 className="text-xl font-bold mb-4">Filter Templates</h2>
+      <h2 className="text-base font-bold mb-4">Filter Templates</h2>
 
-      <div className="relative mb-4">
+      <div className="relative mb-4 pr-8">
         <input
           type="text"
           placeholder="Search..."
-          className="w-full p-2 pl-10 rounded-lg border border-gray-200 focus:outline-none focus:border-gray-300"
+          className="w-full p-2 pl-10  rounded-lg border border-gray-200 focus:outline-none focus:border-gray-300"
           onChange={(e) => handleSearch(e.target.value)}
         />
         <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
@@ -80,7 +80,7 @@ const FilterTemplates = ({ onSearch, onFilterChange }) => {
           <div key={category.name}>
             <button
               onClick={() => toggleCategory(category.name)}
-              className="w-full flex items-center p-3 text-left hover:bg-gray-50 rounded-lg"
+              className="w-full flex items-center p-3 text-left hover:bg-gray-50 rounded-lg text-sm"
             >
               <svg
                 className={`w-5 h-5 text-gray-400 transform ${

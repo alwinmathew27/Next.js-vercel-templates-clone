@@ -24,7 +24,7 @@ export default function MainPage() {
             onFilterChange={handleFilterChange}
           />
         </div>
-        <div className="w-3/4">
+        <div className="texting md:w-3/4">
           <CardDetails searchQuery={searchQuery} activeFilters={activeFilters} />
         </div>
       </div>

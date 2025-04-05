@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../public/images/Logo vercel.png";
+import DropdownLink from "./DropdownLink";
+import Navitems from "./Navitems";
+import CommonBtn from "../general/CommonBtn";
 
 const Header = () => {
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
@@ -69,62 +72,30 @@ const Header = () => {
                 </svg>
               </button>
               {isProductsDropdownOpen && (
-                <div className="absolute z-10 mt-4 bg-white border border-gray-200 rounded-lg shadow-lg flex">
+                <div className="absolute z-10 mt-4 p-8 bg-white border border-gray-200 rounded-lg shadow-lg flex">
                   <div>
-                    <h3 className="px-4 py-2 font-semibold">DX Platform</h3>
+                    <h3 className="px-4 py-2  font-semibold">DX Platform</h3>
                     <Link
                       href="/previews"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
                       Preview
                     </Link>
-                    <Link href="/ai" className="block px-4 py-2 hover:bg-gray-100">
-                      AI
-                    </Link>
+                    <DropdownLink text="AI"></DropdownLink>
                   </div>
                   <div>
                     <h3 className="px-4 py-2 font-semibold">
                       Managed Infrastructure
                     </h3>
-                    <Link
-                      href="/rendering"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Rendering
-                    </Link>
-                    <Link
-                      href="/observability"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Observability
-                    </Link>
-                    <Link
-                      href="/security"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Security
-                    </Link>
+                    <DropdownLink text="Rendering"></DropdownLink>
+                    <DropdownLink text="Observability"></DropdownLink>
+                    <DropdownLink text=" Security"></DropdownLink>
                   </div>
                   <div>
                     <h3 className="px-4 py-2 font-semibold">Open Source</h3>
-                    <Link
-                      href="/nextjs"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Next.js
-                    </Link>
-                    <Link
-                      href="/turboropo"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Turboropo
-                    </Link>
-                    <Link
-                      href="/ai-sdk"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      AI SDK
-                    </Link>
+                    <DropdownLink text="Next.js"></DropdownLink>
+                    <DropdownLink text="TurboPro"></DropdownLink>
+                    <DropdownLink text="AI SDK"></DropdownLink>
                   </div>
                 </div>
               )}
@@ -157,39 +128,14 @@ const Header = () => {
                 <div className="absolute z-10 mt-4 bg-white border border-gray-200 rounded-lg shadow-lg flex">
                   <div>
                     <h3 className="px-4 py-2 font-semibold">Use Cases</h3>
-                    <Link
-                      href="/ai-apps"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      AI Apps
-                    </Link>
-                    <Link
-                      href="/commerce"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Composable Commerce
-                    </Link>
-                    <Link
-                      href="/marketing"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Marketing Sites
-                    </Link>
+                    <DropdownLink text="AI Apps"></DropdownLink>
+                    <DropdownLink text="Composable Commerce"></DropdownLink>
+                    <DropdownLink text="Marketing Sites"></DropdownLink>
                   </div>
                   <div>
                     <h3 className="px-4 py-2 font-semibold">Users</h3>
-                    <Link
-                      href="/platform-engineers"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Platform Engineers
-                    </Link>
-                    <Link
-                      href="/design-engineers"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Design Engineers
-                    </Link>
+                    <DropdownLink text="  Platform Engineers"></DropdownLink>
+                    <DropdownLink text="  Disign Engineers"></DropdownLink>
                   </div>
                 </div>
               )}
@@ -222,79 +168,31 @@ const Header = () => {
                 <div className="absolute z-10 mt-4 bg-white border border-gray-200 rounded-lg shadow-lg flex">
                   <div>
                     <h3 className="px-4 py-2 font-semibold">Tools</h3>
-                    <Link
-                      href="/resource-center"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Resource Center
-                    </Link>
-                    <Link
-                      href="/marketplace"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Marketplace
-                    </Link>
-                    <Link
-                      href="/templates"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Templates
-                    </Link>
+                    <DropdownLink text="Resource Center"></DropdownLink>
+                    <DropdownLink text="Marketplace"></DropdownLink>
+                    <DropdownLink text="Templates"></DropdownLink>
                   </div>
                   <div>
                     <h3 className="px-4 py-2 font-semibold">Company</h3>
-                    <Link
-                      href="/customers"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Customers
-                    </Link>
-                    <Link
-                      href="/blog"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Blog
-                    </Link>
-                    <Link
-                      href="/changelog"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Changelog
-                    </Link>
+                    <DropdownLink text="Customers"></DropdownLink>
+                    <DropdownLink text="Blog"></DropdownLink>
+                    <DropdownLink text="Changelog"></DropdownLink>
                   </div>
                 </div>
               )}
             </div>
 
-            <Link
-              href="#"
-              className="text-gray-600 hidden hover:text-gray-900 lg:inline-block"
-            >
-              Enterprise
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-600 hidden hover:text-gray-900 lg:inline-block"
-            >
-              Docs
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-600 hidden hover:text-gray-900 xl:inline-block"
-            >
-              Pricing
-            </Link>
+            <Navitems text="Enterprise" />
+            <Navitems text="Docs" />
+            <Navitems text="Pricing" />
           </nav>
         </div>
 
         <div className="flex space-x-4 text-[14px]">
-          <button className="text-gray-600 hover:text-gray-900">Log In</button>
-          <button className="border border-gray-200 px-4 py-2 rounded-lg bg-white-800 text-black font-semibold">
-            Contact
-          </button>
-          <button className="border border-gray-200 px-4 py-2 rounded-lg bg-black text-white font-semibold">
-            Sign Up
-          </button>
+          <CommonBtn text="Log in" className="font-medium" textColor="text-gray-500"/>
+         
+          <CommonBtn text="Contact" padding="px-4 py-2" bgColor="bg-white" textColor="text-black" className="font-semibold" hoverColor="hover:bg-gray-100" border="border border-gray-200"  />
+          <CommonBtn text="Sign Up" padding="px-4 py-2" bgColor="bg-black" textColor="text-white" hoverColor="hover:bg-black-100" className="font-semibold  " />
         </div>
       </div>
 
@@ -374,33 +272,11 @@ const Header = () => {
                     </button>
                     {isProductsDropdownOpen && (
                       <div className="mt-4 space-y-4 pl-4">
-                        <Link
-                          href="/previews"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Preview
-                        </Link>
-                        <Link href="/ai" className="block hover:bg-gray-100 py-2">
-                          AI
-                        </Link>
-                        <Link
-                          href="/rendering"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Rendering
-                        </Link>
-                        <Link
-                          href="/observability"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Observability
-                        </Link>
-                        <Link
-                          href="/security"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Security
-                        </Link>
+                        <DropdownLink text="Preview" />
+                        <DropdownLink text="AI" />
+                        <DropdownLink text="Rendering" />
+                        <DropdownLink text="Observability" />
+                        <DropdownLink text="Security" />
                       </div>
                     )}
                   </div>
@@ -430,36 +306,12 @@ const Header = () => {
                     </button>
                     {isSolutionsDropdownOpen && (
                       <div className="mt-4 space-y-4 pl-4">
-                        <Link
-                          href="/ai-apps"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          AI Apps
-                        </Link>
-                        <Link
-                          href="/commerce"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Composable Commerce
-                        </Link>
-                        <Link
-                          href="/marketing"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Marketing Sites
-                        </Link>
-                        <Link
-                          href="/platform-engineers"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Platform Engineers
-                        </Link>
-                        <Link
-                          href="/design-engineers"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Design Engineers
-                        </Link>
+                        <DropdownLink text="AI Apps" />
+                        <DropdownLink text="Composable Commerce" />
+                        <DropdownLink text="Marketing Sites" />
+                        <DropdownLink text="Platform Engineers" />
+                        <DropdownLink text="Design Engineers" />
+                        <DropdownLink text="Web Apps" />
                       </div>
                     )}
                   </div>
@@ -489,46 +341,16 @@ const Header = () => {
                     </button>
                     {isResourcesDropdownOpen && (
                       <div className="mt-4 space-y-4 pl-4">
-                        <Link
-                          href="/resource-center"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Resource Center
-                        </Link>
-                        <Link
-                          href="/marketplace"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Marketplace
-                        </Link>
-                        <Link
-                          href="/templates"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Templates
-                        </Link>
-                        <Link
-                          href="/customers"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Customers
-                        </Link>
-                        <Link
-                          href="/blog"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Blog
-                        </Link>
-                        <Link
-                          href="/changelog"
-                          className="block hover:bg-gray-100 py-2"
-                        >
-                          Changelog
-                        </Link>
+                        <DropdownLink text="Resource Center" />
+                        <DropdownLink text="Marketplace" />
+                        <DropdownLink text="Templates" />
+                        <DropdownLink text="Customers" />
+                        <DropdownLink text="Blog" />
+                        <DropdownLink text="Customers" />
+                        <DropdownLink text="Changelog" />
                       </div>
                     )}
                   </div>
-
                   <Link href="#" className="text-gray-600 hover:text-gray-900">
                     Enterprise
                   </Link>

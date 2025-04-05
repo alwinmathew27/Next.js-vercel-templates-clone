@@ -53,3 +53,9 @@ body {
     font-size: 0.875rem;
   }
 }
+
+@media (max-width: 428px) {
+  .custom-grid {
+    @apply grid-cols-1;
+  }
+}

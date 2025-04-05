@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ServicesTxt from "./ServicesTxt";
 import FooterLogo from "../../../../public/images/footerVercelIcon.png";
 import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 
@@ -8,54 +9,35 @@ const Footerbot = () => {
   return (
     <footer className="wrapper bg-white text-gray-800 py-16 ">
       <div className="container mx-auto flex justify-between flex-wrap gap-10">
-        {/* <nav className="flex justify-between"> */}
         <div className="space-y-2">
           <h4 className="font-medium">Products</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="/ai">
-                <span className="hover:text-gray-600">AI</span>
-              </Link>
+              <ServicesTxt text="AI" />
             </li>
             <li>
-              <Link href="/enterprise">
-                <span className="hover:text-gray-600">Enterprise</span>
-              </Link>
+              <ServicesTxt text="Enterprise" />
             </li>
             <li>
-              <Link href="/next-js">
-                <span className="hover:text-gray-600">Next.js</span>
-              </Link>
+              <ServicesTxt text="Next.js" />
             </li>
             <li>
-              <Link href="/observability">
-                <span className="hover:text-gray-600">Observability</span>
-              </Link>
+              <ServicesTxt text="Observability" />
             </li>
             <li>
-              <Link href="/previews">
-                <span className="hover:text-gray-600">Previews</span>
-              </Link>
+              <ServicesTxt text="Preview" />
             </li>
             <li>
-              <Link href="/rendering">
-                <span className="hover:text-gray-600">Rendering</span>
-              </Link>
+              <ServicesTxt text="Rendering" />
             </li>
             <li>
-              <Link href="/security">
-                <span className="hover:text-gray-600">Security</span>
-              </Link>
+              <ServicesTxt text="Security" />
             </li>
             <li>
-              <Link href="/turbo">
-                <span className="hover:text-gray-600">Turbo</span>
-              </Link>
+              <ServicesTxt text="Turbo" />
             </li>
             <li>
-              <Link href="/v0">
-                <span className="hover:text-gray-600">v0</span>
-              </Link>
+              <ServicesTxt text="Vo" />
             </li>
           </ul>
         </div>
@@ -63,49 +45,39 @@ const Footerbot = () => {
           <h4 className="font-medium">Resources</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="/community">
-                <span className="hover:text-gray-600">Community</span>
-              </Link>
+              <ServicesTxt text="Community" />
             </li>
             <li>
-              <Link href="/docs">
-                <span className="hover:text-gray-600">Docs</span>
-              </Link>
+              
+              <ServicesTxt text="Docs"/>
             </li>
             <li>
-              <Link href="/experts">
-                <span className="hover:text-gray-600">Experts</span>
-              </Link>
+              
+              <ServicesTxt text="Experts"/>
             </li>
             <li>
-              <Link href="/guides">
-                <span className="hover:text-gray-600">Guides</span>
-              </Link>
+             
+              <ServicesTxt text="Guide"/>
             </li>
             <li>
-              <Link href="/help">
-                <span className="hover:text-gray-600">Help</span>
-              </Link>
+              
+              <ServicesTxt text="Help"/>
             </li>
             <li>
-              <Link href="/integrations">
-                <span className="hover:text-gray-600">Integrations</span>
-              </Link>
+             
+              <ServicesTxt text="Integration"/>
             </li>
             <li>
-              <Link href="/pricing">
-                <span className="hover:text-gray-600">Pricing</span>
-              </Link>
+              
+              <ServicesTxt text="Pricing"/>
             </li>
             <li>
-              <Link href="/resources">
-                <span className="hover:text-gray-600">Resources</span>
-              </Link>
+            
+              <ServicesTxt text="Resources"/>
             </li>
             <li>
-              <Link href="/templates">
-                <span className="hover:text-gray-600">Templates</span>
-              </Link>
+             
+              <ServicesTxt text="Templates"/>
             </li>
           </ul>
         </div>
@@ -113,69 +85,42 @@ const Footerbot = () => {
           <h4 className="font-medium">Company</h4>
           <ul className="space-y-1">
             <li>
-              <Link href="/about">
-                <span className="hover:text-gray-600">About</span>
-              </Link>
+              
+              <ServicesTxt text="About"/>
             </li>
             <li>
-              <Link href="/blog">
-                <span className="hover:text-gray-600">Blog</span>
-              </Link>
+            
+              <ServicesTxt text="Blog"/>
             </li>
             <li>
-              <Link href="/careers">
-                <span className="hover:text-gray-600">Careers</span>
-              </Link>
+              
+              <ServicesTxt text="Careers"/>
             </li>
             <li>
-              <Link href="/changelog">
-                <span className="hover:text-gray-600">Changelog</span>
-              </Link>
+             
+              <ServicesTxt text="Changelog"/>
             </li>
             <li>
-              <Link href="/contact">
-                <span className="hover:text-gray-600">Contact Us</span>
-              </Link>
+           
+              <ServicesTxt text="Contact"/>
             </li>
             <li>
-              <Link href="/customers">
-                <span className="hover:text-gray-600">Customers</span>
-              </Link>
+            
+              <ServicesTxt text="Customers"/>
             </li>
             <li>
-              <Link href="/partners">
-                <span className="hover:text-gray-600">Partners</span>
-              </Link>
+              
+              <ServicesTxt text="Partners"/>
             </li>
             <li>
-              <Link href="/privacy">
-                <span className="hover:text-gray-600">Privacy Policy</span>
-              </Link>
+              
+              <ServicesTxt text="Privacy"/>
             </li>
             <li>
-              <Link href="/legal">
-                <span className="hover:text-gray-600">Legal</span>
-              </Link>
+              <ServicesTxt text="Legal"/>
             </li>
           </ul>
         </div>
-        {/* <div className="flex-row space-x-2 align-baseline items-center">
-          <h4 className="font-medium">Scocial</h4>
-
-          <a href="https://github.com" className="hover:text-gray-700 flex ">
-            <FaGithub size={15} />
-            GitHub
-          </a>
-          <a href="https://linkedin.com" className="hover:text-gray-700 ">
-            <FaLinkedin size={15} /> linkedin
-          </a>
-          <a href="https://twitter.com" className="hover:text-gray-700">
-            <FaTwitter size={15} /> twitter
-          </a>
-          <a href="https://youtube.com" className="hover:text-gray-700">
-            <FaYoutube size={15} /> youtube
-          </a>
-        </div> */}
         <div className="flex flex-col space-y-2 items-start">
           <h4 className="font-medium">Social</h4>
 
@@ -213,8 +158,6 @@ const Footerbot = () => {
             <Image src={FooterLogo} alt="Logo" className="w-full" />
           </Link>
         </div>
-
-        {/* </nav> */}
       </div>
     </footer>
   );

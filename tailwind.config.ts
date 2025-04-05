@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        "max-380": { max: "380px" }, 
+        "min-430": { min: "430px" }, 
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
