@@ -4,14 +4,12 @@ import carddata from "./dynamicpage.json";
 import Geistspace from "../../component/geist_spacer/geistspace";
 import CommonBtn from "@/app/component/general/CommonBtn";
 // this is a dynamic page that will take the id from the url and show the Template details
-
 // Helper function for random card selection
 const getRandomCards = (cards: any[], currentId: number, count: number) => {
   const filteredCards = cards.filter((card) => card.id !== currentId);
   const shuffled = [...filteredCards].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count);
 };
-
 export default function ProjectDetailPage({
   params,
 }: {
@@ -19,14 +17,11 @@ export default function ProjectDetailPage({
 }) {
   const { id } = params;
   const card = carddata.find((card) => card.id === parseInt(id));
-
   if (!card) {
     return <div>Project not found!</div>;
   }
-
   return (
     <div className="wrapper min-h-screen bg-background py-4 mt-16 lg:py-8">
-      {/* <div className="m py-4 "> */}
       {/* Main Content Section */}
       <div className="grid gap-12 lg:grid-cols-12 mb-8 lg:mb-16">
         {/* Left Section */}
@@ -37,16 +32,13 @@ export default function ProjectDetailPage({
           >
             ← Back to Templates
           </Link>
-
           <div className="space-y-4">
             <div className="hero_tag inline-flex items-center rounded text-gray-500 px-2.5 py-0.5 text-sm font-semibold">
               {card.hero_tag}
             </div>
-
             <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight lg:text-5xl break-words">
               {card.title}
             </h1>
-
             <p className="text-sm sm:text-xl text-gray-500">
               {card.description}
             </p>
@@ -55,7 +47,6 @@ export default function ProjectDetailPage({
               <CommonBtn padding="px-4 sm:px-8 py-1 sm:py-3" hoverColor = "hover:bg-blue-100" bgColor="bg-white" textColor="text-black" className=" font-normal text-xs sm:text-base"  text="View Demo" border = "border border-gray-200"/>
             </div>
           </div>
-
           <div className="space-y-4 p-3">
             <div className="flex justify-between border-b py-2">
               <span className="text-gray-500">Framework</span>
@@ -91,7 +82,6 @@ export default function ProjectDetailPage({
           </div>
         </div>
       </div>
-
       {/* Related templates Section */}
       <div className="mt-8 lg:mt-28">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6 lg:mb-8">
@@ -155,11 +145,9 @@ export default function ProjectDetailPage({
           ))}
         </div>
       </div>
-
       <div className="mt-24">
         <Geistspace />
       </div>
-      {/* </div> */}
     </div>
   );
 }

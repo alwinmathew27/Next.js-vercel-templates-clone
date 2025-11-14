@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import carddata from "./carddata.json";
-
 export default function CardDetails({ searchQuery, activeFilters }) {
   const filteredCards = carddata.filter((card) => {
     // Search filter
@@ -8,7 +8,6 @@ export default function CardDetails({ searchQuery, activeFilters }) {
       !searchQuery ||
       card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       card.description.toLowerCase().includes(searchQuery.toLowerCase());
-
     // Check all active filters
     const filterMatch = Object.entries(activeFilters).every(
       ([category, items]) => {
@@ -35,10 +34,8 @@ export default function CardDetails({ searchQuery, activeFilters }) {
         }
       }
     );
-
     return searchMatch && filterMatch;
   });
-
   return (
     <div className="container py-6">
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-380:grid-cols-1 ">
@@ -46,9 +43,10 @@ export default function CardDetails({ searchQuery, activeFilters }) {
           <Link key={card.id} href={`/cards/${card.id}`}>
             <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer h-full max-w-[300px] mx-auto">
               <div className="relative w-full pb-[56.25%]">
-                <img
+                <Image
                   src={card.image}
                   alt={card.title}
+                  fill
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
               </div>

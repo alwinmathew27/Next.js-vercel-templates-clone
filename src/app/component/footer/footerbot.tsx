@@ -153,7 +153,7 @@ const Footerbot = () => {
             <span>YouTube</span>
           </a>
         </div>
-        <div className="mr-20">
+        <div className="mr-20 hidden lg:block ">
           <Link href="/">
             <Image src={FooterLogo} alt="Logo" className="w-full" />
           </Link>
