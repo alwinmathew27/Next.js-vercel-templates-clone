@@ -6,35 +6,29 @@ import Logo from "../../../../public/images/Logo vercel.png";
 import DropdownLink from "./DropdownLink";
 import Navitems from "./Navitems";
 import CommonBtn from "../general/CommonBtn";
-
 const Header = () => {
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const toggleProductsDropdown = () => {
     setIsProductsDropdownOpen(!isProductsDropdownOpen);
     setIsSolutionsDropdownOpen(false);
     setIsResourcesDropdownOpen(false);
   };
-
   const toggleSolutionsDropdown = () => {
     setIsSolutionsDropdownOpen(!isSolutionsDropdownOpen);
     setIsProductsDropdownOpen(false);
     setIsResourcesDropdownOpen(false);
   };
-
   const toggleResourcesDropdown = () => {
     setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
     setIsProductsDropdownOpen(false);
     setIsSolutionsDropdownOpen(false);
   };
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   return (
     <header className="wrapper bg-white w-[100%]">
       {/* Desktop Header */}
@@ -140,7 +134,6 @@ const Header = () => {
                 </div>
               )}
             </div>
-
             {/* Resources Dropdown */}
             <div className="relative">
               <button
@@ -181,7 +174,6 @@ const Header = () => {
                 </div>
               )}
             </div>
-
             <Navitems text="Enterprise" />
             <Navitems text="Docs" />
             <Navitems text="Pricing" />
@@ -297,7 +289,6 @@ const Header = () => {
                       </div>
                     )}
                   </div>
-
                   {/* Mobile Solutions Dropdown */}
                   <div className="relative">
                     <button
@@ -332,7 +323,6 @@ const Header = () => {
                       </div>
                     )}
                   </div>
-
                   {/* Mobile Resources Dropdown */}
                   <div className="relative">
                     <button
