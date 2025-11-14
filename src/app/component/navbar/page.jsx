@@ -189,13 +189,31 @@ const Header = () => {
         </div>
 
         <div className="flex space-x-4 text-[14px]">
-          <CommonBtn text="Log in" className="font-medium" textColor="text-gray-500"/>
-         
-          <CommonBtn text="Contact" padding="px-4 py-2" bgColor="bg-white" textColor="text-black" className="font-semibold" hoverColor="hover:bg-gray-100" border="border border-gray-200"  />
-          <CommonBtn text="Sign Up" padding="px-4 py-2" bgColor="bg-black" textColor="text-white" hoverColor="hover:bg-black-100" className="font-semibold  " />
+          <CommonBtn
+            text="Log in"
+            className="font-medium"
+            textColor="text-gray-500"
+          />
+
+          <CommonBtn
+            text="Contact"
+            padding="px-4 py-2"
+            bgColor="bg-white"
+            textColor="text-black"
+            className="font-semibold hidden xl:block"
+            hoverColor="hover:bg-gray-100"
+            border="border border-gray-200"
+          />
+          <CommonBtn
+            text="Sign Up"
+            padding="px-4 py-2"
+            bgColor="bg-black"
+            textColor="text-white"
+            hoverColor="hover:bg-black-100"
+            className="font-semibold  "
+          />
         </div>
       </div>
-
       {/* Mobile Header */}
       <div className="md:hidden">
         <div className="container mx-auto py-4 flex justify-between items-center">
@@ -204,7 +222,6 @@ const Header = () => {
               <Image src={Logo} alt="Logo" className="w-full" />
             </Link>
           </div>
-
           {/* Hamburger Menu Button */}
           <button
             onClick={toggleMobileMenu}
@@ -372,5 +389,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;
