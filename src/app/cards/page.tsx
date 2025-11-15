@@ -17,7 +17,9 @@ export default function CardDetails({ searchQuery, activeFilters }: CardDetailsP
         const activeItems = Object.entries(items)
           .filter(([_, isSelected]) => isSelected)
           .map(([item]) => item);
+
         if (activeItems.length === 0) return true;
+
         switch (category) {
           case "Framework":
             return activeItems.includes(card.Framework);
@@ -29,6 +31,7 @@ export default function CardDetails({ searchQuery, activeFilters }: CardDetailsP
             return activeItems.some((item) => card.Database?.includes(item));
           case "CMS":
             return activeItems.some((item) => card.CMS?.includes(item));
+          // Add other categories as needed
           default:
             return true;
         }
