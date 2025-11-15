@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import carddata from "../../../lib/data/cardsdata.json";
-export default function CardDetails({ searchQuery, activeFilters }) {
+type CardDetailsProps = {
+  searchQuery: string;
+  activeFilters: Record<string, Record<string, boolean>>;
+};
+export default function CardDetails({ searchQuery, activeFilters }: CardDetailsProps) {
   const filteredCards = carddata.filter((card) => {
-    // Search filter
     const searchMatch =
       !searchQuery ||
       card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -14,9 +17,7 @@ export default function CardDetails({ searchQuery, activeFilters }) {
         const activeItems = Object.entries(items)
           .filter(([_, isSelected]) => isSelected)
           .map(([item]) => item);
-
         if (activeItems.length === 0) return true;
-
         switch (category) {
           case "Framework":
             return activeItems.includes(card.Framework);
@@ -28,7 +29,6 @@ export default function CardDetails({ searchQuery, activeFilters }) {
             return activeItems.some((item) => card.Database?.includes(item));
           case "CMS":
             return activeItems.some((item) => card.CMS?.includes(item));
-          // Add other categories as needed
           default:
             return true;
         }

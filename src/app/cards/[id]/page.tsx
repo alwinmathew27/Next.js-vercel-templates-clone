@@ -14,7 +14,6 @@ type CardType = {
   css: string;
   author?: string;
 };
-// convert JSON into typed data
 const carddata: CardType[] = rawData;
 const getRandomCards = (cards: CardType[], currentId: number, count: number) => {
   const filteredCards = cards.filter((card) => card.id !== currentId);
