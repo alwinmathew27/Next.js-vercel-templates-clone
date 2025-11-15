@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import carddata from "./carddata.json";
+import carddata from "../../../lib/data/cardsdata.json";
 export default function CardDetails({ searchQuery, activeFilters }) {
   const filteredCards = carddata.filter((card) => {
     // Search filter

@@ -1,11 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import carddata from "./dynamicpage.json";
+import rawData from "../../../../lib/data/dynamic.json";
 import Geistspace from "../../component/geist_spacer/geistspace";
 import CommonBtn from "@/app/component/general/CommonBtn";
-// this is a dynamic page that will take the id from the url and show the Template details
-// Helper function for random card selection
-const getRandomCards = (cards: any[], currentId: number, count: number) => {
+type CardType = {
+  id: number;
+  hero_tag: string;
+  title: string;
+  description: string;
+  image: string;
+  Framework: string;
+  usecase: string;
+  css: string;
+  author?: string;
+};
+// convert JSON into typed data
+const carddata: CardType[] = rawData;
+const getRandomCards = (cards: CardType[], currentId: number, count: number) => {
   const filteredCards = cards.filter((card) => card.id !== currentId);
   const shuffled = [...filteredCards].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count);

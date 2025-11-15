@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 const Footerbot = () => {
   return (
     <footer className="wrapper bg-white text-gray-800 py-16 ">
-      <div className="container mx-auto flex justify-between flex-wrap gap-10">
+      <div className="container mx-auto flex justify-between  flex-wrap gap-10">
         <div className="space-y-2">
           <h4 className="font-medium">Products</h4>
           <ul className="space-y-1">
